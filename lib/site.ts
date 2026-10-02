@@ -74,6 +74,29 @@ export const site = {
       media: { type: "video", src: "/videos/fitness.mp4", poster: "/images/fitness-poster.jpg" },
     },
   ],
+  partnerships: {
+    intro:
+      "Brands don't just get a post. They get a creator who trains the audience, shoots the content and knows what makes people stop scrolling.",
+    cta: { label: "Start a partnership", href: "#contact" },
+    reasons: [
+      {
+        title: "An audience that trusts me",
+        body: "1M+ followers who come for real training, not ads. When I put something in front of them, it lands as a recommendation.",
+      },
+      {
+        title: "Creator and crew in one",
+        body: "I shoot, edit and post it myself through Hyper Films. No agency in the middle, faster turnaround, and content that feels native to my feed.",
+      },
+      {
+        title: "Where fitness meets fight culture",
+        body: "My content lives where training, boxing and lifestyle overlap, the space apparel, supplement, wellness and sports brands want to own.",
+      },
+      {
+        title: "Footage that works beyond my feed",
+        body: "Shot with production quality, so the content can live on in your ads, your site and your own socials.",
+      },
+    ],
+  },
   socials: [
     { label: "Instagram", short: "IG", href: "https://www.instagram.com/hyperfitnessrd/" },
     { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@hyperflight" },

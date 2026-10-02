@@ -29,7 +29,8 @@ The look is borrowed from a **film camera viewfinder**:
 - [x] Navbar: transparent-to-blurred on scroll, numbered links, live timecode, full-screen mobile menu
 - [x] Hero: shutter-open intro, portrait backdrop, brand and coaching calls to action
 - [x] What I do: credentials ticker and four service cards (partnerships, video production, boxing, fitness) with looping footage
-- [ ] Partnerships: why brands work with him, deliverables, and process
+- [x] Partnerships: why brands work with him, with a pinned call to action
+- [ ] Partnerships: example deal packages and how it works
 - [ ] About: contact-sheet photo layout and short bio
 - [ ] Contact: one inquiry form routed by topic
 - [ ] Footer
