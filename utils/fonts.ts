@@ -11,6 +11,9 @@ export const display = Big_Shoulders({
   subsets: ["latin"],
   variable: "--font-display-face",
   weight: ["500", "700", "900"],
+  // Next has no fallback metrics for this family; skip the auto-generated one.
+  adjustFontFallback: false,
+  fallback: ["Arial Narrow", "sans-serif"],
 });
 
 export const mono = JetBrains_Mono({
