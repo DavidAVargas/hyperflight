@@ -7,7 +7,7 @@ import Footer from "@/components/_blocks/footer/footer";
 export const metadata: Metadata = {
   title: "Hyperflight — Coach. Creator. Filmmaker.",
   description:
-    "Pro boxing coach, online fitness coach and filmmaker from the Dominican Republic. Brand partnerships, video production and coaching.",
+    "Pro boxing coach, fitness coach and filmmaker based in New Jersey. Brand partnerships, video production and coaching.",
 };
 
 export default function RootLayout({
