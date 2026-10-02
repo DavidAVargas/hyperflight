@@ -33,7 +33,7 @@ The look is borrowed from a **film camera viewfinder**:
 - [ ] Partnerships: example deal packages and how it works
 - [ ] About: contact-sheet photo layout and short bio
 - [ ] Contact: one inquiry form routed by topic
-- [ ] Footer
+- [x] Footer: end-credits call to action, links, socials and oversized wordmark
 - [ ] English / Spanish toggle
 
 ## Tech stack

@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${display.variable} ${mono.variable} bg-ink text-bone`}
       >
-        <div className="grid min-h-dvh grid-cols-[minmax(0,1fr)] grid-rows-[1fr_auto]">
+        <div id="top" className="grid min-h-dvh grid-cols-[minmax(0,1fr)] grid-rows-[1fr_auto]">
           <Header />
           <main>{children}</main>
           <Footer />

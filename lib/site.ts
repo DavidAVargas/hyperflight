@@ -100,5 +100,11 @@ export const site = {
   socials: [
     { label: "Instagram", short: "IG", href: "https://www.instagram.com/hyperfitnessrd/" },
     { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@hyperflight" },
+    { label: "Hyper Films", short: "HF", href: "https://www.instagram.com/hyperfilmss/" },
   ],
+  footer: {
+    headline: ["Let's make", "something."],
+    note: "Brand deals, video projects and coaching inquiries. Pick where you want to start.",
+    builtBy: { label: "David A. Vargas", href: "https://github.com/DavidAVargas" },
+  },
 } as const;
