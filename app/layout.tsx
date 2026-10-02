@@ -4,10 +4,34 @@ import "@/styles/globals.css";
 import Header from "@/components/_blocks/header/header";
 import Footer from "@/components/_blocks/footer/footer";
 
+const title = "Hyperflight — Coach. Creator. Filmmaker.";
+const description =
+  "Pro boxing coach, fitness coach and filmmaker based in New Jersey. Brand partnerships, video production and coaching.";
+
+// Absolute base for share-image URLs. Set NEXT_PUBLIC_SITE_URL once there's a domain.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3001");
+
 export const metadata: Metadata = {
-  title: "Hyperflight — Coach. Creator. Filmmaker.",
-  description:
-    "Pro boxing coach, fitness coach and filmmaker based in New Jersey. Brand partnerships, video production and coaching.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: "Hyperflight",
+    type: "website",
+    locale: "en_US",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({

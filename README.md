@@ -53,6 +53,14 @@ pnpm dev
 
 Open [http://localhost:3001](http://localhost:3001).
 
+### Share previews
+
+The Open Graph image (`app/opengraph-image.tsx`) and HF icons are generated at build time. On Vercel, link previews use the production URL automatically. For a custom domain, set:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
 ## Project structure
 
 ```
