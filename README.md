@@ -11,9 +11,9 @@ The site is organized by **who is visiting** rather than by job title:
 | Visitor | What they need | Where they go |
 | --- | --- | --- |
 | Brands & companies | Reach, audience, past collaborations | Partnerships → inquiry |
-| Businesses needing video | Portfolio of commercial and vlog work | Films → book a shoot |
-| People who want to get fit | Results, programs, testimonials | Coaching → apply |
-| Local clients | Location, training options | The Gym → WhatsApp |
+| Businesses needing video | Hyper Films: marketing, music videos, events | Video Production → book a shoot |
+| People who want to box | Pro boxing coaching, technique and self-defense | Boxing → book a session |
+| People who want to get fit | Personal training, in person or online | Fitness → start training |
 
 ## Design direction
 
@@ -28,12 +28,11 @@ The look is borrowed from a **film camera viewfinder**:
 
 - [x] Navbar: transparent-to-blurred on scroll, numbered links, live timecode, full-screen mobile menu
 - [x] Hero: shutter-open intro, portrait backdrop, brand and coaching calls to action
-- [ ] Proof bar: audience and results at a glance
-- [ ] Brand partnerships: media kit and inquiry form
-- [ ] Films: video portfolio grid
-- [ ] Coaching: transformations, testimonials, programs
-- [ ] The Gym: location and booking
-- [ ] Contact & footer
+- [x] What I do: credentials ticker and four service cards (partnerships, video production, boxing, fitness) with looping footage
+- [ ] Partnerships: why brands work with him, deliverables, and process
+- [ ] About: contact-sheet photo layout and short bio
+- [ ] Contact: one inquiry form routed by topic
+- [ ] Footer
 - [ ] English / Spanish toggle
 
 ## Tech stack

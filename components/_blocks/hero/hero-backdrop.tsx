@@ -12,7 +12,7 @@ export default function HeroBackdrop({ image, video }: HeroBackdropProps) {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* Portrait: full-bleed on mobile, right-hand panel on desktop. */}
-      <div className="absolute inset-0 lg:left-auto lg:w-[58%]">
+      <div className="absolute inset-0 overflow-hidden lg:left-auto lg:w-[58%]">
         <Image
           src={image.src}
           alt={image.alt}

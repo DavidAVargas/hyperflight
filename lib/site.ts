@@ -1,13 +1,14 @@
 import heroPortrait from "@/public/images/hf-hero.jpg";
+import armsCrossed from "@/public/images/hf-arms-crossed.jpg";
 
 export const site = {
   name: "Hyperflight",
   location: "New Jersey",
   navLinks: [
+    { label: "Services", href: "#services" },
     { label: "Partnerships", href: "#partnerships" },
-    { label: "Films", href: "#films" },
-    { label: "Coaching", href: "#coaching" },
-    { label: "The Gym", href: "#gym" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
   ],
   cta: { label: "Work with me", href: "#partnerships" },
   hero: {
@@ -15,7 +16,7 @@ export const site = {
     intro:
       "Pro boxing coach, fitness coach and filmmaker based in New Jersey. I train fighters, transform bodies and create content for brands that want to be seen. 1M+ on TikTok.",
     primary: { label: "Work with me", href: "#partnerships", caption: "Brands & companies" },
-    secondary: { label: "Train with me", href: "#coaching", caption: "Boxing & fitness" },
+    secondary: { label: "Train with me", href: "#boxing", caption: "Boxing & fitness" },
     image: {
       src: heroPortrait,
       alt: "Hyperflight smiling in a black cap and tee, tattooed arms crossed, giving a thumbs up",
@@ -23,6 +24,56 @@ export const site = {
     // Optional: drop a clip in /public (e.g. "/hero.mp4") to play over the photo.
     video: null as string | null,
   },
+  credentials: [
+    "1M+ on TikTok",
+    "37K on Instagram",
+    "Pro boxing coach",
+    "Personal trainer",
+    "Filmmaker & editor",
+    "Based in New Jersey",
+  ],
+  services: [
+    {
+      id: "brand-partnerships",
+      tag: "For brands",
+      title: "Brand Partnerships",
+      description:
+        "Sponsored content that doesn't feel like an ad. Your product in front of a 1M+ audience that actually trusts me.",
+      items: ["Sponsored TikToks & Reels", "YouTube vlog integrations", "Launches & ambassadorships"],
+      cta: { label: "Start a partnership", href: "#partnerships" },
+      media: { type: "image", src: armsCrossed, alt: "Hyperflight with arms crossed, smiling, in a black cap and tee" },
+    },
+    {
+      id: "video-production",
+      tag: "Hyper Films",
+      title: "Video Production",
+      description:
+        "I don't just post content, I shoot and edit it. Creator and crew in one, from concept to final cut.",
+      items: ["Business marketing", "Music videos", "Weddings, events & fight nights"],
+      cta: { label: "Book a shoot", href: "#contact" },
+      media: { type: "video", src: "/videos/films.mp4", poster: "/images/films-poster.jpg" },
+    },
+    {
+      id: "boxing",
+      tag: "Pro coach",
+      title: "Boxing Coaching",
+      description:
+        "Technique, conditioning and self-defense for every level, from first-timers to fighters.",
+      items: ["1-on-1 & partner sessions", "Pad work & technique", "Self-defense fundamentals"],
+      cta: { label: "Book a session", href: "#contact" },
+      media: { type: "video", src: "/videos/pads.mp4", poster: "/images/pads-poster.jpg" },
+    },
+    {
+      id: "fitness",
+      tag: "Personal training",
+      title: "Fitness Training",
+      description:
+        "Strength, conditioning and the habits that make results stick. In the gym in New Jersey, or online from anywhere.",
+      items: ["1-on-1 personal training", "Online coaching programs", "Strength & conditioning"],
+      cta: { label: "Start training", href: "#contact" },
+      media: { type: "video", src: "/videos/fitness.mp4", poster: "/images/fitness-poster.jpg" },
+    },
+  ],
   socials: [
     { label: "Instagram", short: "IG", href: "https://www.instagram.com/hyperfitnessrd/" },
     { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@hyperflight" },
