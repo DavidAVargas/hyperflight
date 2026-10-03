@@ -102,9 +102,16 @@ export const site = {
     { label: "TikTok", short: "TT", href: "https://www.tiktok.com/@hyperflight" },
     { label: "Hyper Films", short: "HF", href: "https://www.instagram.com/hyperfilmss/" },
   ],
+  contact: {
+    // Stored in parts so the full address never appears in the page source;
+    // it's joined in the browser only when a visitor clicks.
+    email: { user: "hypergym29", domain: "icloud.com" },
+    // Prefilled subject so inquiries are easy to spot in his inbox.
+    subject: "Inquiry from hyperflight website",
+  },
   footer: {
     headline: ["Let's make", "something."],
-    note: "Brand deals, video projects and coaching inquiries. Pick where you want to start.",
+    note: "Brand deals, video projects and coaching inquiries. Send me an email and I'll get back to you.",
     builtBy: { label: "David A. Vargas", href: "https://github.com/DavidAVargas" },
   },
 } as const;

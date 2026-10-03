@@ -1,4 +1,5 @@
 import { site } from "@/lib/site";
+import EmailActions from "./email-actions";
 
 const { footer } = site;
 
@@ -26,27 +27,11 @@ export default function Footer() {
             </h2>
           </div>
 
-          <div className="flex max-w-sm flex-col gap-6">
+          <div className="flex max-w-md flex-col gap-6">
             <p className="text-base leading-relaxed text-bone/70">
               {footer.note}
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href={site.hero.primary.href}
-                className="group flex items-center justify-center gap-3 bg-bone px-6 py-3.5 font-display text-lg font-bold tracking-wide text-ink uppercase transition-colors hover:bg-rec hover:text-bone"
-              >
-                {site.hero.primary.label}
-                <span className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-              <a
-                href={site.hero.secondary.href}
-                className="flex items-center justify-center border border-bone/40 px-6 py-3.5 font-display text-lg font-bold tracking-wide uppercase transition-colors hover:border-bone hover:bg-bone/5"
-              >
-                {site.hero.secondary.label}
-              </a>
-            </div>
+            <EmailActions />
           </div>
         </div>
 
@@ -92,9 +77,15 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <p className={label}>Business</p>
-            <a href={site.cta.href} className={`${link} mt-4 inline-block`}>
+            <a
+              href="#contact"
+              className="mt-4 block text-sm text-bone/80 transition-colors hover:text-rec"
+            >
+              Get in touch ↑
+            </a>
+            <a href={site.cta.href} className={`${link} mt-3 inline-block`}>
               Partnerships →
             </a>
           </div>
