@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { display, inter, mono } from "@/utils/fonts";
 import "@/styles/globals.css";
-import Header from "@/components/_blocks/header/header";
-import Footer from "@/components/_blocks/footer/footer";
 
 const title = "Hyperflight — Coach. Creator. Filmmaker.";
 const description =
@@ -44,11 +42,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${display.variable} ${mono.variable} bg-ink text-bone`}
       >
-        <div id="top" className="grid min-h-dvh grid-cols-[minmax(0,1fr)] grid-rows-[1fr_auto]">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   );

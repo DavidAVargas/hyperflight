@@ -1,5 +1,4 @@
 import { site } from "@/lib/site";
-import CredentialsMarquee from "./credentials-marquee";
 import ServiceCard from "./service-card";
 
 export default function Services() {
@@ -9,13 +8,11 @@ export default function Services() {
       aria-labelledby="services-title"
       className="scroll-mt-16"
     >
-      <CredentialsMarquee />
-
       <div className="mx-auto max-w-[1440px] px-6 py-24 lg:px-10 lg:py-32">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-mono text-[10px] tracking-[0.3em] text-smoke uppercase">
-              SC.02 · What I do
+              SC.02 · Services
             </p>
             <h2
               id="services-title"

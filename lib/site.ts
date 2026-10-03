@@ -1,5 +1,9 @@
 import heroPortrait from "@/public/images/hf-hero.jpg";
 import armsCrossed from "@/public/images/hf-arms-crossed.jpg";
+import aboutJump from "@/public/images/about-jump.jpg";
+import aboutSprint from "@/public/images/about-sprint.jpg";
+import aboutStretch from "@/public/images/about-stretch.jpg";
+import aboutAgility from "@/public/images/about-agility.jpg";
 
 export const site = {
   name: "Hyperflight",
@@ -23,6 +27,42 @@ export const site = {
     },
     // Optional: drop a clip in /public (e.g. "/hero.mp4") to play over the photo.
     video: null as string | null,
+  },
+  about: {
+    headline: ["Built from", "the floor up."],
+    intro:
+      "I didn't start with a following. I started on a gym floor, one client at a time, and built everything else from there.",
+    chapters: [
+      {
+        title: "The trainer",
+        body: "I earned my personal training certification and went to work on the floor at a local gym. Early mornings, packed schedules and one rule: every client leaves better than they came in.",
+      },
+      {
+        title: "The gym",
+        body: "The results spoke for themselves. My client list kept growing until I outgrew the gym, so I opened my own training space and started coaching on my own terms.",
+      },
+      {
+        title: "The camera",
+        body: "Running my own business meant learning to market it. I picked up a camera and taught myself everything, from TikToks and Reels to full marketing videos. That became Hyper Films, and brands started reaching out.",
+      },
+      {
+        title: "The corner",
+        body: "Today I train everyday people and professional boxers, and I bring the same work ethic to every brand I partner with.",
+      },
+    ],
+    closing: "Same energy in the gym, in the ring and behind the camera.",
+    facts: [
+      "Certified personal trainer",
+      "Pro boxing coach",
+      "Own training space · NJ",
+      "Founder, Hyper Films",
+    ],
+    photos: [
+      { src: aboutJump, label: "Power", alt: "Hyperflight mid-air in a high-knee jump on a turf field" },
+      { src: aboutSprint, label: "Speed", alt: "Hyperflight exploding into a sprint on a turf field" },
+      { src: aboutStretch, label: "Recovery", alt: "Close-up of a quad stretch on the field, tattooed leg and pink running shoes" },
+      { src: aboutAgility, label: "Agility", alt: "Hyperflight shirtless in sunglasses, bounding across a turf field against a blue sky" },
+    ],
   },
   credentials: [
     "1M+ on TikTok",

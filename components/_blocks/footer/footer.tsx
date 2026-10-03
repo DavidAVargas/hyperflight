@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 pt-24 lg:px-10 lg:pt-32">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className={label}>SC.04 · Contact</p>
+            <p className={label}>SC.05 · Contact</p>
             <h2 className="mt-4 font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] font-black uppercase">
               {footer.headline[0]}
               <br />

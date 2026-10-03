@@ -31,7 +31,7 @@ The look is borrowed from a **film camera viewfinder**:
 - [x] What I do: credentials ticker and four service cards (partnerships, video production, boxing, fitness) with looping footage
 - [x] Partnerships: why brands work with him, with a pinned call to action
 - [ ] Partnerships: example deal packages and how it works
-- [ ] About: contact-sheet photo layout and short bio
+- [x] About: his story in four chapters with a field-shoot contact sheet
 - [ ] Contact: one inquiry form routed by topic
 - [x] Footer: end-credits call to action, links, socials and oversized wordmark
 - [ ] English / Spanish toggle
