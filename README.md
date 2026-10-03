@@ -30,7 +30,8 @@ The look is borrowed from a **film camera viewfinder**:
 - [x] Hero: shutter-open intro, portrait backdrop, brand and coaching calls to action
 - [x] What I do: credentials ticker and four service cards (partnerships, video production, boxing, fitness) with looping footage
 - [x] Partnerships: why brands work with him, with a pinned call to action
-- [ ] Partnerships: example deal packages and how it works
+- [x] Service detail panels: per-service details, highlighted rates note, service-specific email subjects
+- [x] Media kit: 4-page PDF and `/media-kit` page, previewed and downloadable from the Brand Partnerships panel
 - [x] About: his story in four chapters with a field-shoot contact sheet
 - [ ] Contact: one inquiry form routed by topic
 - [x] Footer: end-credits call to action, links, socials and oversized wordmark
@@ -52,6 +53,16 @@ pnpm dev
 ```
 
 Open [http://localhost:3001](http://localhost:3001).
+
+### Media kit
+
+Numbers and copy live in `lib/media-kit.ts`. After editing, with the server running:
+
+```bash
+pnpm media-kit:pdf
+```
+
+This re-exports `public/hyperflight-media-kit.pdf` and the page previews in `public/images/media-kit/`.
 
 ### Share previews
 

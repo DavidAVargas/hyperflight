@@ -172,3 +172,32 @@ input[type="search"]::-webkit-search-cancel-button {
     scroll-behavior: smooth;
   }
 }
+
+/* Media kit PDF: one 16:9 sheet per page, colors kept exactly. */
+@media print {
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
+  html,
+  body {
+    background: var(--ink);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* Service detail panel slides in from the right. */
+@keyframes panel-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Keep the page from scrolling behind an open panel. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}

@@ -80,7 +80,12 @@ export const site = {
       description:
         "Sponsored content that doesn't feel like an ad. Your product in front of a 1M+ audience that actually trusts me.",
       items: ["Sponsored TikToks & Reels", "YouTube vlog integrations", "Launches & ambassadorships"],
-      cta: { label: "Start a partnership", href: "#partnerships" },
+      details: {
+        lead: "Content that doesn't feel like an ad. I make it, shoot it and post it to an audience that trusts me, so your brand shows up the way people actually want to see it.",
+        lists: [],
+        subject: "Brand partnership inquiry",
+        emailLabel: "Email about a partnership",
+      },
       media: { type: "image", src: armsCrossed, alt: "Hyperflight with arms crossed, smiling, in a black cap and tee" },
     },
     {
@@ -90,7 +95,32 @@ export const site = {
       description:
         "I don't just post content, I shoot and edit it. Creator and crew in one, from concept to final cut.",
       items: ["Business marketing", "Music videos", "Weddings, events & fight nights"],
-      cta: { label: "Book a shoot", href: "#contact" },
+      details: {
+        lead: "Hyper Films is my production side. I shoot, edit and deliver video and photo for businesses, artists and events, with the same eye I use for my own content.",
+        lists: [
+          {
+            title: "What I shoot",
+            items: [
+              "Business marketing videos",
+              "Music videos",
+              "Weddings & sweet 16s",
+              "Events & fight nights",
+              "Photography & editing",
+            ],
+          },
+          {
+            title: "How it works",
+            items: [
+              "Concept: we plan the story and the shots",
+              "Shoot: on location, with my own gear",
+              "Edit: cut, color and sound",
+              "Deliver: ready to post or run as ads",
+            ],
+          },
+        ],
+        subject: "Video production inquiry",
+        emailLabel: "Book a shoot",
+      },
       media: { type: "video", src: "/videos/films.mp4", poster: "/images/films-poster.jpg" },
     },
     {
@@ -100,7 +130,27 @@ export const site = {
       description:
         "Technique, conditioning and self-defense for every level, from first-timers to fighters.",
       items: ["1-on-1 & partner sessions", "Pad work & technique", "Self-defense fundamentals"],
-      cta: { label: "Book a session", href: "#contact" },
+      details: {
+        lead: "I coach boxing for every level, from first-timers learning their stance to professional fighters getting ready for camp.",
+        lists: [
+          {
+            title: "Sessions",
+            items: [
+              "1-on-1 coaching",
+              "Partner sessions",
+              "Pad work & technique",
+              "Boxing conditioning",
+              "Self-defense fundamentals",
+            ],
+          },
+          {
+            title: "Where",
+            items: ["In person in New Jersey"],
+          },
+        ],
+        subject: "Boxing coaching inquiry",
+        emailLabel: "Email about boxing",
+      },
       media: { type: "video", src: "/videos/pads.mp4", poster: "/images/pads-poster.jpg" },
     },
     {
@@ -110,7 +160,26 @@ export const site = {
       description:
         "Strength, conditioning and the habits that make results stick. In the gym in New Jersey, or online from anywhere.",
       items: ["1-on-1 personal training", "Online coaching programs", "Strength & conditioning"],
-      cta: { label: "Start training", href: "#contact" },
+      details: {
+        lead: "Training built around real results: getting stronger, moving better and building habits that last long after the session ends.",
+        lists: [
+          {
+            title: "Training",
+            items: [
+              "1-on-1 personal training",
+              "Online coaching programs",
+              "Athletic performance coaching",
+              "Strength & conditioning",
+            ],
+          },
+          {
+            title: "Where",
+            items: ["In person in New Jersey", "Online, from anywhere"],
+          },
+        ],
+        subject: "Personal training inquiry",
+        emailLabel: "Email about training",
+      },
       media: { type: "video", src: "/videos/fitness.mp4", poster: "/images/fitness-poster.jpg" },
     },
   ],

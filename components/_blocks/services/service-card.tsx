@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
 import VideoLoop from "./video-loop";
+import ServiceDialog from "./service-dialog";
+import ServiceDetails from "./service-details";
 
 type Service = (typeof site.services)[number];
 
@@ -67,16 +69,14 @@ export default function ServiceCard({
             </li>
           ))}
         </ul>
-        {/* Stretched link: the whole card is clickable. */}
-        <a
-          href={service.cta.href}
-          className="mt-6 inline-flex items-center gap-2 font-display text-lg font-bold tracking-wide uppercase after:absolute after:inset-0 group-hover:text-rec"
+        {/* Stretched trigger: the whole card opens the detail panel. */}
+        <ServiceDialog
+          title={service.title}
+          tag={service.tag}
+          ctaLabel="View details"
         >
-          {service.cta.label}
-          <span className="transition-transform group-hover:translate-x-1">
-            →
-          </span>
-        </a>
+          <ServiceDetails service={service} />
+        </ServiceDialog>
       </div>
     </article>
   );

@@ -1,13 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { site } from "@/lib/site";
-
-const { email: parts, subject } = site.contact;
-
-// Joined only at click time so scrapers reading the HTML never see the address.
-const getEmail = () => `${parts.user}@${parts.domain}`;
-const getMailto = () =>
-  `mailto:${getEmail()}?subject=${encodeURIComponent(subject)}`;
+import { getEmail, getMailto } from "@/lib/contact";
 
 async function copyText(text: string) {
   try {
