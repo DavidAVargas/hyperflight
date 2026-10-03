@@ -1,6 +1,6 @@
 # Hyperflight
 
-A cinematic personal brand site for **Hyperflight / Hyper Fitness RD**: a pro boxing coach, online fitness coach, gym owner, content creator (1M+ on TikTok) and filmmaker based in New Jersey.
+A cinematic personal brand site for **Hyperflight / Hyper Fitness RD**: a pro boxing coach, online fitness coach, gym owner, content creator (140K on TikTok) and filmmaker based in New Jersey.
 
 Social media is where his audience lives, but brands and clients need somewhere more professional to land. This site gives him one link that explains everything he does and gets people to the right contact for what they want.
 
@@ -31,6 +31,7 @@ The look is borrowed from a **film camera viewfinder**:
 - [x] What I do: credentials ticker and four service cards (partnerships, video production, boxing, fitness) with looping footage
 - [x] Partnerships: why brands work with him, with a pinned call to action
 - [x] Service detail panels: per-service details, highlighted rates note, service-specific email subjects
+- [x] Rotating service clips (video production, boxing, fitness) and a watermarked client results gallery in the Fitness panel
 - [x] Media kit: 4-page PDF and `/media-kit` page, previewed and downloadable from the Brand Partnerships panel
 - [x] About: his story in four chapters with a field-shoot contact sheet
 - [ ] Contact: one inquiry form routed by topic

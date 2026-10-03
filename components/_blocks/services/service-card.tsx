@@ -35,8 +35,7 @@ export default function ServiceCard({
           />
         ) : (
           <VideoLoop
-            src={media.src}
-            poster={media.poster}
+            sources={media.sources}
             className={mediaClass}
           />
         )}

@@ -2,7 +2,7 @@
 // Optional fields (website, audience) stay hidden until filled; re-export the PDF after editing.
 
 export const mediaKit = {
-  // Shown on the cover; numbers below are rounded down with "+" so they stay true as he grows.
+  // Shown on the cover. Follower counts are rounded up (client request); other stats are rounded down with "+".
   updated: "2026",
   email: "hypergym29@icloud.com",
   website: null as string | null, // waiting on the custom domain
@@ -13,7 +13,7 @@ export const mediaKit = {
       name: "TikTok",
       handle: "@hyperflight",
       stats: [
-        { value: "130K+", label: "Followers" },
+        { value: "140K", label: "Followers" },
         { value: "12M+", label: "Likes" },
         { value: "8M+", label: "Top video views" },
       ],
@@ -23,7 +23,7 @@ export const mediaKit = {
       name: "Instagram",
       handle: "@hyperfitnessrd",
       stats: [
-        { value: "37K+", label: "Followers" },
+        { value: "40K", label: "Followers" },
         { value: "2.7M+", label: "Views" },
         { value: "480K+", label: "Accounts reached" },
         { value: "98K+", label: "Interactions" },

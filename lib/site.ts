@@ -18,7 +18,7 @@ export const site = {
   hero: {
     lines: ["Coach.", "Creator.", "Filmmaker."],
     intro:
-      "Pro boxing coach, fitness coach and filmmaker based in New Jersey. I train fighters, transform bodies and create content for brands that want to be seen. 1M+ on TikTok.",
+      "Pro boxing coach, fitness coach and filmmaker based in New Jersey. I train fighters, transform bodies and create content for brands that want to be seen. 140K on TikTok.",
     primary: { label: "Work with me", href: "#partnerships", caption: "Brands & companies" },
     secondary: { label: "Train with me", href: "#boxing", caption: "Boxing & fitness" },
     image: {
@@ -65,8 +65,8 @@ export const site = {
     ],
   },
   credentials: [
-    "1M+ on TikTok",
-    "37K on Instagram",
+    "140K on TikTok",
+    "40K on Instagram",
     "Pro boxing coach",
     "Personal trainer",
     "Filmmaker & editor",
@@ -78,7 +78,7 @@ export const site = {
       tag: "For brands",
       title: "Brand Partnerships",
       description:
-        "Sponsored content that doesn't feel like an ad. Your product in front of a 1M+ audience that actually trusts me.",
+        "Sponsored content that doesn't feel like an ad. Your product in front of 180K followers who actually trust me.",
       items: ["Sponsored TikToks & Reels", "YouTube vlog integrations", "Launches & ambassadorships"],
       details: {
         lead: "Content that doesn't feel like an ad. I make it, shoot it and post it to an audience that trusts me, so your brand shows up the way people actually want to see it.",
@@ -121,7 +121,18 @@ export const site = {
         subject: "Video production inquiry",
         emailLabel: "Book a shoot",
       },
-      media: { type: "video", src: "/videos/films.mp4", poster: "/images/films-poster.jpg" },
+      media: {
+        type: "video",
+        sources: [
+          // Order: vp-1, vp-4, vp-6, vp-2, vp-3, vp-5 (mixes boxing with other productions)
+          { src: "/videos/films-2.mp4", poster: "/images/films-2-poster.jpg" },
+          { src: "/videos/films-5.mp4", poster: "/images/films-5-poster.jpg" },
+          { src: "/videos/films-6.mp4", poster: "/images/films-6-poster.jpg" },
+          { src: "/videos/films-3.mp4", poster: "/images/films-3-poster.jpg" },
+          { src: "/videos/films-4.mp4", poster: "/images/films-4-poster.jpg" },
+          { src: "/videos/films-7.mp4", poster: "/images/films-7-poster.jpg" },
+        ],
+      },
     },
     {
       id: "boxing",
@@ -151,7 +162,17 @@ export const site = {
         subject: "Boxing coaching inquiry",
         emailLabel: "Email about boxing",
       },
-      media: { type: "video", src: "/videos/pads.mp4", poster: "/images/pads-poster.jpg" },
+      media: {
+        type: "video",
+        sources: [
+          { src: "/videos/pads.mp4", poster: "/images/pads-poster.jpg" },
+          { src: "/videos/boxing-2.mp4", poster: "/images/boxing-2-poster.jpg" },
+          { src: "/videos/boxing-3.mp4", poster: "/images/boxing-3-poster.jpg" },
+          { src: "/videos/boxing-4.mp4", poster: "/images/boxing-4-poster.jpg" },
+          { src: "/videos/boxing-5.mp4", poster: "/images/boxing-5-poster.jpg" },
+          { src: "/videos/boxing-6.mp4", poster: "/images/boxing-6-poster.jpg" },
+        ],
+      },
     },
     {
       id: "fitness",
@@ -180,7 +201,16 @@ export const site = {
         subject: "Personal training inquiry",
         emailLabel: "Email about training",
       },
-      media: { type: "video", src: "/videos/fitness.mp4", poster: "/images/fitness-poster.jpg" },
+      media: {
+        type: "video",
+        sources: [
+          { src: "/videos/fitness.mp4", poster: "/images/fitness-poster.jpg" },
+          { src: "/videos/fitness-3.mp4", poster: "/images/fitness-3-poster.jpg" },
+          { src: "/videos/fitness-4.mp4", poster: "/images/fitness-4-poster.jpg" },
+          { src: "/videos/fitness-5.mp4", poster: "/images/fitness-5-poster.jpg" },
+          { src: "/videos/fitness-6.mp4", poster: "/images/fitness-6-poster.jpg" },
+        ],
+      },
     },
   ],
   partnerships: {
@@ -190,7 +220,7 @@ export const site = {
     reasons: [
       {
         title: "An audience that trusts me",
-        body: "1M+ followers who come for real training, not ads. When I put something in front of them, it lands as a recommendation.",
+        body: "180K followers across TikTok and Instagram who come for real training, not ads. When I put something in front of them, it lands as a recommendation.",
       },
       {
         title: "Creator and crew in one",

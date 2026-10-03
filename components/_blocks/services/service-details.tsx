@@ -2,6 +2,7 @@ import { site } from "@/lib/site";
 import BrandDetails from "./brand-details";
 import EmailButton from "./email-button";
 import RatesNote from "./rates-note";
+import ResultsGallery from "./results-gallery";
 
 type Service = (typeof site.services)[number];
 
@@ -36,6 +37,7 @@ export default function ServiceDetails({ service }: { service: Service }) {
       ))}
 
       {isBrand && <BrandDetails />}
+      {service.id === "fitness" && <ResultsGallery />}
 
       <RatesNote />
 
