@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { site } from "@/lib/site";
 
 export const alt =
-  "Hyperflight — a film strip of four frames: smiling studio portrait, fight-night footage, boxing pad work and a gym session. Coach, creator, filmmaker based in New Jersey.";
+  "Hyperflight — Coach. Creator. Filmmaker. Pro boxing coach, fitness coach and filmmaker based in New Jersey.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -14,45 +14,22 @@ const BONE = "#f3eee4";
 const SMOKE = "rgba(243, 238, 228, 0.55)";
 const REC = "#e5332f";
 
-const FRAMES = [
-  { file: "assets/images/hf-side-smile.jpg", label: "Partnerships", pos: "50% 0%" },
-  { file: "public/images/films-poster.jpg", label: "Hyper Films", pos: "50% 45%" },
-  { file: "public/images/pads-poster.jpg", label: "Boxing", pos: "50% 55%" },
-  { file: "public/images/fitness-poster.jpg", label: "Fitness", pos: "50% 45%" },
-];
-
-function Sprockets() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "0 22px",
-        height: 40,
-        alignItems: "center",
-      }}
-    >
-      {Array.from({ length: 30 }, (_, i) => (
-        <div
-          key={i}
-          style={{
-            width: 20,
-            height: 14,
-            borderRadius: 3,
-            background: "rgba(243, 238, 228, 0.12)",
-          }}
-        />
-      ))}
-    </div>
-  );
-}
+const corner = (pos: Record<string, number>) => ({
+  position: "absolute" as const,
+  width: 28,
+  height: 28,
+  borderColor: "rgba(243, 238, 228, 0.45)",
+  borderStyle: "solid" as const,
+  borderWidth: 0,
+  ...pos,
+});
 
 export default async function Image() {
   const root = process.cwd();
-  const [display, mono, ...frames] = await Promise.all([
+  const [display, mono, portrait] = await Promise.all([
     readFile(join(root, "assets/fonts/BigShoulders-Black.ttf")),
     readFile(join(root, "assets/fonts/JetBrainsMono-Medium.ttf")),
-    ...FRAMES.map((f) => readFile(join(root, f.file), "base64")),
+    readFile(join(root, "assets/images/hf-side-smile.jpg"), "base64"),
   ]);
 
   return new ImageResponse(
@@ -62,76 +39,100 @@ export default async function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
+          position: "relative",
           background: INK,
           color: BONE,
-          fontFamily: "JetBrains Mono",
         }}
       >
-        <Sprockets />
-
-        {/* Four frames, like a strip of developed film. */}
-        <div style={{ display: "flex", gap: 14, padding: "6px 40px 0" }}>
-          {FRAMES.map((f, i) => (
-            <div key={f.label} style={{ display: "flex", flexDirection: "column" }}>
-              <img
-                src={`data:image/jpeg;base64,${frames[i]}`}
-                alt=""
-                width={269}
-                height={338}
-                style={{
-                  objectFit: "cover",
-                  objectPosition: f.pos,
-                  borderRadius: 4,
-                  filter: "saturate(0.85) contrast(1.05)",
-                }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginTop: 10,
-                  fontSize: 13,
-                  letterSpacing: 3,
-                  textTransform: "uppercase",
-                }}
-              >
-                <span style={{ color: REC }}>▸ {String(i + 1).padStart(2, "0")}A</span>
-                <span style={{ color: SMOKE }}>{f.label}</span>
-              </div>
-            </div>
-          ))}
+        {/* Portrait panel on the right, faded into the black stage. */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            width: 560,
+            height: 630,
+            display: "flex",
+          }}
+        >
+          <img
+            src={`data:image/jpeg;base64,${portrait}`}
+            width={560}
+            height={746}
+            style={{ objectFit: "cover", marginTop: 0 }}
+            alt=""
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: 560,
+              height: 630,
+              display: "flex",
+              backgroundImage: `linear-gradient(to right, ${INK} 0%, rgba(11,9,9,0.7) 25%, rgba(11,9,9,0) 60%)`,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: 560,
+              height: 630,
+              display: "flex",
+              backgroundImage: `linear-gradient(to top, ${INK} 0%, rgba(11,9,9,0) 35%)`,
+            }}
+          />
         </div>
+
+        {/* Viewfinder corners. */}
+        <div style={{ ...corner({ top: 32, left: 32 }), borderTopWidth: 2, borderLeftWidth: 2 }} />
+        <div style={{ ...corner({ top: 32, right: 32 }), borderTopWidth: 2, borderRightWidth: 2 }} />
+        <div style={{ ...corner({ bottom: 32, left: 32 }), borderBottomWidth: 2, borderLeftWidth: 2 }} />
+        <div style={{ ...corner({ bottom: 32, right: 32 }), borderBottomWidth: 2, borderRightWidth: 2 }} />
 
         <div
           style={{
+            position: "relative",
             display: "flex",
-            alignItems: "flex-end",
+            flexDirection: "column",
             justifyContent: "space-between",
-            padding: "0 40px 22px",
-            flexGrow: 1,
+            padding: "64px 72px",
+            width: "100%",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div
               style={{
-                width: 22,
-                height: 22,
+                width: 16,
+                height: 16,
                 borderRadius: 999,
                 background: REC,
-                boxShadow: `0 0 22px ${REC}`,
+                boxShadow: `0 0 18px ${REC}`,
               }}
             />
             <div
               style={{
                 fontFamily: "Big Shoulders",
-                fontSize: 112,
-                lineHeight: 0.8,
-                letterSpacing: -1,
+                fontSize: 40,
+                letterSpacing: -0.5,
                 textTransform: "uppercase",
               }}
             >
               {site.name}
+            </div>
+            <div
+              style={{
+                fontFamily: "JetBrains Mono",
+                fontSize: 15,
+                letterSpacing: 4,
+                color: SMOKE,
+                marginLeft: 8,
+                marginTop: 4,
+              }}
+            >
+              REC · NEW JERSEY
             </div>
           </div>
 
@@ -139,22 +140,35 @@ export default async function Image() {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-end",
-              gap: 8,
-              fontSize: 15,
-              letterSpacing: 4,
+              fontFamily: "Big Shoulders",
+              fontSize: 132,
+              lineHeight: 0.86,
               textTransform: "uppercase",
             }}
           >
-            <div style={{ display: "flex", gap: 12 }}>
-              <span>Coach · Creator ·</span>
-              <span style={{ color: REC }}>Filmmaker</span>
-            </div>
-            <span style={{ color: SMOKE }}>New Jersey · 1M+ on TikTok</span>
+            {site.hero.lines.map((line, i) => (
+              <div
+                key={line}
+                style={{ color: i === site.hero.lines.length - 1 ? REC : BONE }}
+              >
+                {line}
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              fontFamily: "JetBrains Mono",
+              fontSize: 17,
+              letterSpacing: 4,
+              color: SMOKE,
+              textTransform: "uppercase",
+            }}
+          >
+            Brand partnerships · Video production · Coaching
           </div>
         </div>
-
-        <Sprockets />
       </div>
     ),
     {
